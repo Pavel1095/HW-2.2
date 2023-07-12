@@ -1,9 +1,36 @@
 public class Kogtevran extends Hogwarts {
-
     private int mind;
     private int wisdom;
     private int wit;
     private int creation;
+
+    public int getMind() {
+        return mind;
+    }
+    public void setMind(int mind) {
+        this.mind = mind;
+    }
+
+    public int getWisdom() {
+        return wisdom;
+    }
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public int getWit() {
+        return wit;
+    }
+    public void setWit(int wit) {
+        this.wit = wit;
+    }
+
+    public int getCreation() {
+        return creation;
+    }
+    public void setCreation(int creation) {
+        this.creation = creation;
+    }
 
     public void compareStudents( Kogtevran studentSecond) {
         int powerOne = this.mind + this.wisdom + this.wit + this.creation;
@@ -49,38 +76,6 @@ public class Kogtevran extends Hogwarts {
                 "\ncreation = " + creation +
                 "\nmagic = " + magic +
                 "\nteleport = " + teleport;
-    }
-
-    public int getMind() {
-        return mind;
-    }
-
-    public void setMind(int mind) {
-        this.mind = mind;
-    }
-
-    public int getWisdom() {
-        return wisdom;
-    }
-
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
-    public int getWit() {
-        return wit;
-    }
-
-    public void setWit(int wit) {
-        this.wit = wit;
-    }
-
-    public int getCreation() {
-        return creation;
-    }
-
-    public void setCreation(int creation) {
-        this.creation = creation;
     }
 }
 

@@ -22,17 +22,6 @@ public class Puffinduy extends Hogwarts {
         this.honesty = honesty;
     }
 
-    @Override
-    public String toString() {
-        return "Я - " + fullName +
-                "\nfullName = " + fullName +
-                "\nindustriousness = " + industriousness +
-                "\nloyalty = " + loyalty +
-                "\nhonesty = " + honesty +
-                "\nmagic = " + magic +
-                "\nteleport = " + teleport;
-    }
-
     public void compareStudents(Puffinduy studentSecond) {
         int powerOne = this.industriousness + this.loyalty + this.honesty;
         int powerTwo = studentSecond.industriousness + studentSecond.loyalty + studentSecond.honesty;
@@ -43,5 +32,15 @@ public class Puffinduy extends Hogwarts {
         } else {
             System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
         }
+    }
+    @Override
+    public String toString() {
+        return "Я - " + fullName +
+                "\nfullName = " + fullName +
+                "\nindustriousness = " + industriousness +
+                "\nloyalty = " + loyalty +
+                "\nhonesty = " + honesty +
+                "\nmagic = " + magic +
+                "\nteleport = " + teleport;
     }
 }

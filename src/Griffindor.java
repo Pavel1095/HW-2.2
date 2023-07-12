@@ -1,20 +1,16 @@
 public class Griffindor extends Hogwarts {
-
     private int honor;
     private int nobility;
     private int bravery;
 
-
-    public void compareStudents (Griffindor studentSecond) {
-        int powerOne = this.honor + this.nobility + this.bravery;
-        int powerTwo = studentSecond.honor + studentSecond.nobility + studentSecond.bravery;
-        if (powerOne > powerTwo){
-            System.out.println(this.fullName + " сильнее, чем " + studentSecond.fullName);
-        } else if (powerTwo > powerOne){
-            System.out.println(studentSecond.fullName + " сильнее, чем " + this.fullName);
-        } else {
-            System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
-        }
+    public int getHonor() {
+        return honor;
+    }
+    public int getNobility() {
+        return nobility;
+    }
+    public int getBravery() {
+        return bravery;
     }
 
     public Griffindor(String fullName, int magic, int teleport, int honor, int nobility, int bravery) {
@@ -36,6 +32,18 @@ public class Griffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+    public void compareStudents (Griffindor studentSecond) {
+        int powerOne = this.honor + this.nobility + this.bravery;
+        int powerTwo = studentSecond.honor + studentSecond.nobility + studentSecond.bravery;
+        if (powerOne > powerTwo){
+            System.out.println(this.fullName + " сильнее, чем " + studentSecond.fullName);
+        } else if (powerTwo > powerOne){
+            System.out.println(studentSecond.fullName + " сильнее, чем " + this.fullName);
+        } else {
+            System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
+        }
+    }
+
     @Override
     public String toString() {
         return "Я " + fullName +
@@ -45,17 +53,5 @@ public class Griffindor extends Hogwarts {
                 "\nbravery = " + bravery +
                 "\nmagic = " + magic +
                 "\ntelleport = " + teleport;
-    }
-
-    public int getHonor() {
-        return honor;
-    }
-
-    public int getNobility() {
-        return nobility;
-    }
-
-    public int getBravery() {
-        return bravery;
     }
 }

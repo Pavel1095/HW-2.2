@@ -1,10 +1,36 @@
 public abstract class Hogwarts {
-
     String fullName;
     int magic;
     int teleport;
 
-    public void compareStudents(Hogwarts studentSecond) {
+    private int getTeleport() {
+        return teleport;
+    }
+    private void setTeleport(int teleport) {
+        if (teleport < 0 || teleport > 100) {
+            throw new RuntimeException("Введено неверное значение.");
+        }
+        this.teleport = teleport;
+    }
+
+    private String getFullName() {
+        return fullName;
+    }
+    private void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    private int getMagic() {
+        return magic;
+    }
+    private void setMagic(int magic) {
+        if (magic < 0 || magic > 100) {
+            throw new RuntimeException("Введено неверное значение.");
+        }
+        this.magic = magic;
+    }
+
+    private void compareStudents(Hogwarts studentSecond) {
         int powerOne = this.magic + this.teleport;
         int powerTwo = studentSecond.magic + studentSecond.teleport;
         if (powerOne > powerTwo) {
@@ -15,38 +41,11 @@ public abstract class Hogwarts {
             System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
         }
     }
-
-
-
-
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public int getMagic() {
-        return magic;
-    }
-
-    public void setMagic(int magic) {
-        if (magic < 0 || magic > 100) {
-            throw new RuntimeException("Введено неверное значение.");
-        }
-        this.magic = magic;
-    }
-
-    public int getTeleport() {
-        return teleport;
-    }
-
-    public void setTeleport(int teleport) {
-        if (teleport < 0 || teleport > 100) {
-            throw new RuntimeException("Введено неверное значение.");
-        }
-        this.teleport = teleport;
+    @Override
+    public String toString() {
+        return "Я - " + fullName +
+                "\nschool - " + "Hogwarts" +
+                "\nmagic = " + magic +
+                "\nteleport = " + teleport;
     }
 }
